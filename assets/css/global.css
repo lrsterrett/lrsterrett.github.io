@@ -1,0 +1,429 @@
+/*******  Base Rules  *********/
+:root {
+    --side-padding: 15px;
+    --margin-y-major: 50px;
+    --margin-y-minor: 10px;
+}
+
+@media(min-width: 1200px) {
+    :root {
+        --side-padding: 50px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p {
+    padding: 5px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: .1s linear;
+}
+
+a:hover {
+    color: orange;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Used to nest sections and make sure content doesn't get too spaced out on large screens */
+.max-width {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 var(--side-padding);
+}
+
+/******** Colors/Theme **********/
+
+nav,
+#nav-dropdown,
+footer {
+    background-color: #004f94;
+}
+
+footer {
+    background: #004f94;
+}
+
+footer p,
+footer pre,
+footer a {
+    color: #aabbee;
+}
+
+nav,
+footer,
+footer h3 {
+    color: #f6f7fe;
+}
+
+a {
+    color: #f6f7fb;
+}
+
+#nav-button,
+#nav-icon {
+    background: #004f94;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.icon-bar {
+    background: white;
+}
+
+/******** Fonts Styles and Sizes **********/
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+#navigation a {
+    padding: 10px 5px;
+}
+
+#footer p,
+#footer a {
+    font-size: 1.1em;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+/**************** Nav Bar ********************/
+
+nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    overflow: hidden; /* This changes when the page loads in header-dropdown.js, but is needed until then so that nav doesn't jump when page is loading*/
+}
+
+nav .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-links {
+    display: none;
+}
+
+#nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+#nav-button:hover {
+    cursor: pointer;
+}
+
+#nav-icon {
+    width: 40px;
+    margin: 3px;
+}
+
+.icon-bar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    margin: 9px 0;
+}
+
+#logo {
+    width: 125px;
+    position: relative;
+    top: 3px;
+}
+
+@media(max-width: 700px) {
+    #logo {
+        transform: scale(.7);
+        left: -30px;
+    }
+}
+
+#nav-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0;
+}
+
+
+@media(min-width: 800px) {
+    #nav-links {
+        display: block;
+    }
+    
+    #nav-links a {
+        margin: 0 20px;
+    }
+    
+    #nav-button {
+        display: none;
+    }
+    
+    nav.open #nav-dropdown {
+        z-index: -1 !important;
+    }
+}
+
+#nav-dropdown a {
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+#nav-dropdown a:first-child {
+    border-top: 1px solid white;
+    padding-top: 20px;
+}
+
+/* Next 3 selectors along w/ header-dropdown.js take care of moving the body content down to reveal the nav bar on screens smaller than desktop */
+nav {
+    transition: .3s margin-bottom linear;
+}
+
+nav.open {
+    margin-bottom: 215px;
+}
+
+nav.open #nav-dropdown {
+    padding-top: 5px;
+}
+
+@media(min-width: 800px) {
+    nav.open {
+        margin-bottom: 0;
+    }
+}
+
+nav.above {
+    z-index: 5;
+}
+
+
+/*************  Specifics  ***************/
+
+#specifics {
+    padding: 40px var(--side-padding) 50px;
+    background: #4477bb;
+    position: relative;
+    overflow: hidden;
+}
+
+#specifics .max-width {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#specifics h3 {
+    text-align: center;
+    font-weight: 400;
+    color: #f6f7fe;
+    text-shadow: 2px 2px 2px rgba(0,79,148, 0.5),
+                -2px -2px 2px rgba(0,79,148, 0.5);
+} 
+
+#specifics h4 {
+    color: #aabbdd;
+    font-size: 20px;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 2px rgba(0,79,148, 0.5),
+                -2px -2px 2px rgba(0,79,148, 0.5);
+}
+
+#specifics button {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+#specifics-buttons,
+#specifics h3,
+#specifics h4 {
+    position: relative;
+    z-index: 50;
+}
+
+@keyframes bg-flow-1 {
+    0% { top: 100%; }
+    50% { top: 0; }
+    100% { top: 0; }
+}
+
+@keyframes bg-flow-2 {
+    0% { top: 0; }
+    100% { top: 105% }
+}
+
+@keyframes bg-flow-3 {
+    0% { top: 100%; }
+    80% { top: 0; }
+    100% { top: 0; }
+}
+
+[class^='line-0'] {
+    position: absolute;
+}
+
+.line-01 {
+    height: 270px;
+    left: -10px !important;
+    transform: rotate(60deg);
+}
+
+.line-01 .glow-ball {
+    animation: bg-flow-1 6s linear 30;
+}
+
+.line-02 {
+    height: 450px;
+    left: 55% !important;
+    bottom: 0 !important;
+    transform: rotate(-55deg);
+}
+
+.line-02 .glow-ball {
+    animation: bg-flow-2 6s linear 3s 30;
+}
+
+.line-03 {
+    height: 450px;
+    left: 75% !important;
+    bottom: 0 !important;
+    transform: rotate(65deg);
+}
+
+.line-03 .glow-ball {
+    animation: bg-flow-3 6s linear 9s 30;
+}
+
+#specifics .glow-ball {
+    box-shadow: 1px 1px 8px 8px #4477bb,
+                -1px -1px 8px 8px #4477bb;
+    background: orange;
+}
+
+
+
+/*************  Footer  ***************/
+
+#footer .max-width {
+    padding: 0 var(--side-padding) 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer h3 {
+    text-align: center;
+    padding: 100px 0 0;
+}
+
+#footer h4 {
+    padding: 0 0 75px;
+    color: #91a2c5;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 860px;
+}
+
+input {
+    max-width: 100%;
+    width: 400px;
+    padding: 15px;
+    font-size: 18px;
+    background: #004f94;
+    color: #91a2c5;
+    border: none;
+    border-bottom: 1.5px solid #8899bb;
+    margin: 20px 15px;
+}
+
+input:focus {
+    color: #f6f7fe;
+    border-color: #f6f7fe;
+    outline: none;
+}
+
+input::placeholder {
+    color: #91a2c5;
+}
+
+#submitButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#submitButton button {
+    background: transparent;
+    color: #91a2c5;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: 1.5px solid #91a2c5;
+    border-radius: 3px;
+    margin-top: 50px;
+    transition: .1s linear;
+}
+
+#submitButton button:hover {
+    color: #f6f7fe;
+    border-color: #f6f7fe;
+}
+
+
+

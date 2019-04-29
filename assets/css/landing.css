@@ -1,0 +1,508 @@
+/******** Colors/Theme **********/
+
+
+#intro {
+/*    background: linear-gradient(to bottom left, #004f94, rgba(0,79,148,0.7) 90%);*/
+    background: #004f94;
+    color: #f6f7fb;
+}
+
+#our-vision {
+    color: #004f94;
+    background: #f6f7fb;
+}
+
+#buyers-suppliers {
+    background: #f6f7fb;
+}
+
+/******** Fonts Styles and Sizes **********/
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+h1.subheader {
+    font-size: 18px;
+    color: #bbb;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #005fa4;
+}
+
+h3 {
+    font-size: 30px;
+/*    color: #0066bb;*/
+    color: #222;
+}
+
+h3.subheader {
+    font-size: 17px;
+    color: #777;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 17px;
+    letter-spacing: .3px;
+    line-height: 1.8em;
+    color: #666;
+}
+
+/********************  Sections ****************/
+
+/********* Intro *******/
+
+#intro {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+#intro .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#intro-angle {
+    position: absolute;
+    right: 0;
+    bottom: -50%;
+    width: 150%;
+    height: 50%;
+    transform-origin: right;
+    transform: rotate(4deg);
+    background: #f6f7fb;
+}
+
+#intro-left {
+    position: relative;
+    top: -25px;
+}
+
+#intro-left h1 {
+    padding: 0;
+}
+
+#intro-left .subheader {
+    margin-top: 10px;
+}
+
+#intro-buttons {
+    margin: 25px 0 0 0;
+}
+
+.theme-button button {
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    background: #f6f7fb;
+    color: #0066bb;
+    border-radius: 3px;
+    border-bottom: 5px solid orange;
+    transition: all .1s ease-in;
+    margin-right: 10px;
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+}
+
+.button-back {
+    z-index: 1;
+    position: absolute;
+    background: orange;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: .2s linear;
+}
+button:hover {
+    border-bottom: 5px solid #f6f7fb;
+}
+
+.theme-button:hover .button-back {
+    transform: translateY(0);
+}
+
+/* Hero Graphic */
+
+#graphic {
+    width: 600px;
+    height: 500px;
+    position: relative;
+    left: -25px;
+}
+
+#graphic > * {
+    position: absolute;
+}
+
+#graphic-p1-bg {
+    height: 14%;
+    width: 12%;
+    top: 44%;
+    left: calc(44% - 1px);
+    border-radius: 50%;
+    background: #004f94;
+    z-index: 9;
+}
+
+#graphic-p1 {
+    width: 10%;
+    top: 45%;
+    left: 45%;
+    z-index: 10;
+}
+
+[class^='line-'] {
+    transform-origin: 100% 100%;
+    bottom: 48%;
+    left: 50%;
+    z-index: 5;
+    width: 1.5px;
+    background: #55aaff;
+}
+
+[class^='line-'] > div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+[class^='person-'] {
+    z-index: 10;
+}
+
+.person-1 {
+    top: 12%;
+    left: 18%;
+}
+
+.person-1::before {
+    content: 'Supplier';
+    color: #ffa500;
+    font-size: 14px;
+    position: absolute;
+    top: -23px;
+    left: 4px;
+}
+
+.line-1 {
+    height: 40%;
+    transform: rotate(-45deg);
+}
+
+.person-2 {
+    top: 11%;
+    left: 52%;
+}
+
+.person-2 img {
+    width: 66px;
+}
+
+.person-2::before {
+    content: 'Supplier';
+    color: #ffa500;
+    font-size: 14px;
+    position: absolute;
+    top: -23px;
+    left: 8px;
+}
+
+.line-2 {
+    height: 29%;
+    transform: rotate(15deg);
+}
+
+.person-3 {
+    top: 41%;
+    left: 85%;
+}
+
+.person-3::before {
+    content: 'Buyer';
+    color: #88bbff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -16px;
+    left: 14px;
+}
+
+.line-3 {
+    height: 45%;
+    transform: rotate(85deg);
+}
+
+.person-4 {
+    top: 83%;
+    left: 68%;
+}
+
+.person-4::before {
+    content: 'Buyer';
+    color: #88bbff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -17px;
+    left: 12px;
+}
+
+.line-4 {
+    height: 43%;
+    transform: rotate(145deg);
+}
+
+.person-5 {
+    top: 74%;
+    left: 31%;
+}
+
+.person-5::before {
+    content: 'Buyer';
+    color: #88bbff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -17px;
+    left: 12px;
+}
+
+.line-5 {
+    height: 30%;
+    transform: rotate(210deg);
+}
+
+.person-6 {
+    top: 60%;
+    left: 0;
+}
+
+.person-6::before {
+    content: 'Buyer';
+    color: #88bbff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -17px;
+    left: 11px;
+}
+
+.line-6 {
+    height: 52%;
+    transform: rotate(255deg);
+}
+
+.glow-ball {
+    position: absolute;
+    top: -10%;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px 8px #004f94,
+                -1px -1px 8px 8px #004f94;
+    background: orange;
+    z-index: 8;
+}
+
+[class^='line']:nth-of-type(odd) .glow-ball {
+    background: white;
+}
+
+/*
+@keyframes flow {
+    0% { top: -3%; }
+    50% { top: 90%; }
+    100% { top: 90%; }
+}
+
+.flow-in {
+    animation: flow 5s linear 20;
+}
+
+
+.flow-out {
+    animation: flow 5s reverse linear 20;
+}
+
+.line-1 .flow-in {
+    animation-delay: .3s;
+}
+
+.line-2 .flow-in {
+    animation-delay: 1.8s;
+}
+
+.line-4 .flow-out,
+.line-6 .flow-out {
+    animation-delay: 1.5s;
+}
+*/
+
+
+/* Alternative - take off animation-delay above */
+
+@keyframes flow-in {
+    0% { top: -3%; }
+    100% { top: 90%; }
+}
+
+@keyframes flow-out {
+    0% { top: 90%; }
+    50% { top: -3%; }
+    100% { top: -3%; }
+}
+
+.flow-in {
+    animation: flow-in 3s linear 40;
+}
+
+.flow-out {
+    animation: flow-out 6s linear 20;
+}
+
+.line-2 .flow-in {
+    animation-delay: 1.5s;
+}
+
+.line-3 .flow-out {
+    animation-delay: 2.7s;
+}
+
+.line-4 .flow-out {
+    animation-delay: 7.2s;
+}
+
+.line-5 .flow-out {
+    animation-delay: 5.7s;
+}
+
+.line-6 .flow-out {
+    animation-delay: 4.2s;
+}
+
+
+
+
+
+
+
+/*******  Our Vision  ******/
+
+#our-vision {
+    padding: 100px 0 100px;
+}
+
+#our-vision .max-width {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#video-flex-wrapper {
+    width: 45%;
+}
+
+#video {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+#video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#our-vision-text {
+    position: relative;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #ddd,
+                0px -1px 2px #ddd;
+    overflow: hidden;
+    background: white;
+}
+
+.left-card-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    background: orange;
+}
+
+#our-vision h3 {
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+#our-vision p {
+    padding: 5px 0;
+}
+
+/**** Buyers/Suppliers ****/
+
+#buyers-suppliers .max-width {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#buyers-suppliers h3 {
+    text-align: center;
+    padding: 3px;
+}
+
+#buyers-suppliers .subheader {
+    margin-bottom: 50px;
+}
+
+.benefit {
+    flex: 600px 0 1;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.benefit img {
+    width: 75px;
+    margin-right: 35px;
+}
+
+.benefit-text {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.benefit-text h4 {
+    padding: 0;
+}
+
+
