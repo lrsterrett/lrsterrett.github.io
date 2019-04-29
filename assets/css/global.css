@@ -320,7 +320,7 @@ nav.above {
 }
 
 .line-01 .glow-ball {
-    animation: bg-flow-1 6s linear 30;
+    animation: bg-flow-1 6s linear infinite;
 }
 
 .line-02 {
@@ -331,7 +331,7 @@ nav.above {
 }
 
 .line-02 .glow-ball {
-    animation: bg-flow-2 6s linear 3s 30;
+    animation: bg-flow-2 6s linear 3s infinite;
 }
 
 .line-03 {
@@ -342,7 +342,7 @@ nav.above {
 }
 
 .line-03 .glow-ball {
-    animation: bg-flow-3 6s linear 9s 30;
+    animation: bg-flow-3 6s linear 9s infinite;
 }
 
 #specifics .glow-ball {

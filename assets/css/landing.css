@@ -370,11 +370,11 @@ button:hover {
 }
 
 .flow-in {
-    animation: flow-in 3s linear 40;
+    animation: flow-in 3s linear infinite;
 }
 
 .flow-out {
-    animation: flow-out 6s linear 20;
+    animation: flow-out 6s linear infinite;
 }
 
 .line-2 .flow-in {
